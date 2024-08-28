@@ -1,0 +1,109 @@
+
+/* ADMINISTRADOR */
+
+#loginOverlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-container {
+    background-color: white;
+    padding: 40px; /* Ajuste o valor do padding conforme necessário */
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  #loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #box .error {
+    color: red;
+  }
+  .login {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20%;
+  }
+    .errorrr {
+  
+        color: red;
+    
+    }
+    #loginOverlay.credenciais-corretas {
+      display: none;
+      backdrop-filter: none;
+    }
+  
+    .carregas {
+      background: none; /* Remove o fundo */
+      border: none; /* Remove as bordas */
+      font-size: 44px; /* Ajusta o tamanho da fonte para tornar o botão maior */
+      padding: 20px; /* Ajusta o espaçamento interno para aumentar o tamanho do botão */
+      cursor: pointer; /* Adiciona um cursor ao passar o mouse */
+  }
+  
+  
+  /* Estilo para o formulário com o ID "boxlog" dentro da div "login" */
+  .login #boxlog {
+    text-align: left;
+  }
+  
+  /* Estilo para o título dentro do formulário de login */
+  .login #boxlog h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  /* Estilo para os rótulos e inputs de E-mail e Senha */
+  #boxlog label  {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-family: 'Raleway', sans-serif;
+  }
+  #boxlog input[type="text"],input[type="email"],input[type="password"]{
+    display: block;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: #000 1px solid;
+    padding: 5px;
+    
+  }
+  
+  /* Estilo para a mensagem de erro */
+  .login .error {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para o botão de entrada (login) */
+  .login .button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  #inputId {
+    border: none;
+    background-color: transparent;
+  }

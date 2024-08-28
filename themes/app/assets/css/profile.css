@@ -1,0 +1,269 @@
+.profile {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  #profile-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    height: 500px;
+  }
+  
+  #header {
+    font-size: 40px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #left-section {
+    display: flex;
+    float: left;
+    width: 40%;
+    text-align: center;
+    padding: 10px;
+    justify-content: space-between;
+  }
+  
+  #user-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  
+  #change-photo-btn {
+    background-color: #000000;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+  
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  .formphoto{
+    
+    text-align: justify;
+  }
+  .formphoto input[type="file"]{
+    border: #111111 solid 2px;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .logout{
+    background-color: #000000;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10%;
+    border-radius: 5px;
+    width: 40%;
+  }
+  
+  #user{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  
+  #right-section {
+    float: right;
+    width: 40%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .shopping{
+    font-size: 19px;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .errormensage{
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .inp_pesquisa{
+    font-family: sans-serif;
+  }
+  /* CADASTRO DE PRODUTOS */
+     .cadastrodeprodutos {
+        font-family: sans-serif;
+        color: #000000;
+      }
+      .tit {
+        color: #000000;
+      }
+  
+      .formulario {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+  
+      .nomeprod,
+      .precoprod,
+      .imagemprod {
+        display: flex;
+        width: 30%;
+        align-items: center;
+        padding: 5px;
+        margin-bottom: 10px;
+        justify-content: center;
+        background: transparent;
+        border-radius: 10px;
+        border: solid 2px black;
+        color: black;
+        height: 20px;
+      }
+      .excluir-produto{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2%;
+      }
+     
+  
+      .produtobutton {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+  
+      #remove {
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 35px;
+        padding: 20px; 
+        background-color: transparent;
+        
+  
+      }
+  
+      .tabelaprodutos {
+        margin-top: 20px;
+      }
+  
+      .tabelaprodutos h1 {
+        color: #000000;
+      }
+  
+      .tabela {
+        width: 100%;
+        border-collapse: collapse;
+        
+        margin-top: 10px;
+      }
+  
+      .tabela th,
+      .tabela td {
+        border: 1px solid #000000;
+        padding: 8px;
+        text-align: left;
+      }
+     
+  
+      .carrega {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+      }
+  
+      .tabelanome, .tabelapreco , .tabelaid {
+        border: 1px solid #000000;
+        padding: 8px;
+        text-align: left;
+        font-family: sans-serif; /* Adicione a fonte desejada */
+        color: #000000; /* Cor preta */
+      }
+      
+      .delete-button {
+        cursor: pointer;
+        color: red; /* Cor do botão de remover (você pode ajustar conforme necessário) */
+      }
+  #inputId{
+    display: flex;
+        width: 30%;
+        align-items: center;
+        padding: 5px;
+        margin-bottom: 10px;
+        justify-content: center;
+        background: transparent;
+        border-radius: 10px;
+        border: solid 2px black;
+        color: black;
+        height: 20px;
+    
+  }
+  
+   .small-photo {
+        display: flex;
+        width: 120px; /* Escolha a largura desejada */
+        height: auto; /* Mantém a proporção original da imagem ajustando automaticamente a altura */
+        /* Ou se você quiser definir uma altura específica, substitua 'auto' pelo valor desejado */
+        border-radius: 120px;
+  
+    }
+    .mensage{
+      color: #00c22d;
+      opacity: 1; /* Garante que a opacidade inicial é 1 (totalmente visível) */
+      transition: opacity 1s; /* Adiciona a transição de opacidade */
+    }
+  
+    .newName{
+      display: flex;
+      width: 95%;
+      align-items: center;
+      padding: 5px;
+      margin-bottom: 10px;
+      justify-content: center;
+      background: transparent;
+      border-radius: 10px;
+      border: solid 2px black;
+      color: black;
+      height: 20px;
+  
+    }
+    .trocadenome{
+      font-size: 10px;
+      font-family: "Raleway", sans-serif;
+    }
+    .trocadenome{
+      text-align: justify;
+    }
+    .trocanome{
+      background-color: #000000;
+        color: #ffffff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .container-photo{
+      margin-left: 20%;
+      text-align: justify;
+      display: flex;
+      
+    
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      justify-content: space-between;
+    }

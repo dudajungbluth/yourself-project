@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.logo img{
+  max-width: 150px;
+  max-height: 150px ;
+}
+.icons{
+  justify-content: center;
+
+
+}
+.icons i{
+  font-size: 30px;
+}
+button{
+  background: transparent; /* Remove o fundo */
+  border: none; /* Remove a borda */
+}
+
+a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    font-family: "Raleway", sans-serif;
+}
+ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+}
+li{
+  display: block;
+  margin: 10px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+}
+li:hover{
+  background-color: gray;
+  
+}
+
+.images {
+    display: flex; /* Aplicando flex ao contêiner pai */
+    justify-content: center;
+}
+
+.images img {
+    width: 450x;
+    height: 600px;
+    margin: 20px;
+    /* O resto do seu estilo aqui */
+}
+
+.range {
+    display: flex; /* Torna o container flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: black; /* Define a cor de fundo para preto */
+    color: white; /* Define a cor do texto como branco */
+    height: 58px;
+}
+
+label {
+    margin: 0 45px; /* Espaçamento entre os ícones */
+    width: 200px;
+    height: 200px;
+    display: flex; /* Torna os rótulos flexíveis */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+label i {
+    font-size: 30px; /* Ajuste o tamanho do ícone conforme necessário */
+}
+
+
+/* LOGIN  */
+
+
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "Bebas Neue", sans-serif;
+
+}
+.form-login{
+  display: flex;
+  justify-content:center;
+  padding: 20px;
+  width: 60%;
+  margin-top: 50px;
+  font-size: 20px;
+  
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.login-title{
+
+  margin-bottom: 5%;
+  text-align: center;
+  font-size: 30px;
+}
+form input[type="email"],[type="password"],[type="name"],[type="confirm"] {
+  background-color: transparent;
+  border: 1px solid #CCC;
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+  width: 100%;
+}
+form input[type="submit"]{
+  width: 100%;
+  background-color:black;
+  border: none;
+  color: #fff;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+}
+.span-register{
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+a{
+  text-decoration: none;
+}

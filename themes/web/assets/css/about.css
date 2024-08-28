@@ -1,0 +1,50 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+/* ABOUT */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.about-container {
+  display: flex;
+  height: 100%; /* Ajusta a altura da div para ocupar toda a altura da tela */
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  max-height: 90%; /* Torna a imagem responsiva, ocupando no máximo a altura da tela */
+}
+
+.about-message {
+  flex: 1;
+  padding: 0 20px; /* Adicionando um espaçamento para separar o texto da borda */
+}
+
+.about-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 50px;
+}
+
+.about-text {
+  font-family: "Raleway", sans-serif;
+  padding: 10px;
+}
+
+::selection{
+  background-color: rgb(241, 0, 145);
+
+}
