@@ -16,7 +16,7 @@ class Products extends Api
 
     public function insertProduct (array $data)
     {
-        // $this->auth();
+        $this->auth();
         if(in_array("", $data)) {
             $this->back([
                 "type" => "error",
@@ -66,7 +66,7 @@ class Products extends Api
 }
 public function updateProduct(array $data)
 {
-    // $this->auth();
+    $this->auth();
     $service = new Product(
         $data["id"],
         $data["name"],
@@ -82,7 +82,7 @@ public function updateProduct(array $data)
 
 public function deleteProduct(array $data)
 {
-    // $this->auth();
+    $this->auth();
     
     $service = new Product();
     $success = $service->deleteProduct($data["id"]);

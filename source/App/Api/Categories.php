@@ -15,7 +15,7 @@ class Categories extends Api
     }
     public function insertCategory (array $data)
     {
-        // $this->auth();
+        $this->auth();
         if(in_array("", $data)) {
             $this->back([
                 "type" => "error",
@@ -26,7 +26,7 @@ class Categories extends Api
 
         $category = new Category(
             null,
-            $data["name"],
+            $data["name"]
         );
 
         $insertcategory = $category->insert();
@@ -61,7 +61,7 @@ class Categories extends Api
 }
 public function updateCategory(array $data)
 {
-    // $this->auth();
+    $this->auth();
     $service = new Category(
         $data["id"],
             $data["name"]
@@ -73,7 +73,7 @@ public function updateCategory(array $data)
 
 public function deleteCategory(array $data)
 {
-    // $this->auth();
+     $this->auth();
 
     $service = new Category();
     $success = $service->deleteCategory($data["id"]);
