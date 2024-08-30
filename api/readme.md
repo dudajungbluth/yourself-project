@@ -1,37 +1,4 @@
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yourself Project</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1, h2, h3, h4 {
-            color: #333;
-        }
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 5px;
-            border-radius: 4px;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 4px;
-            overflow-x: auto;
-        }
-        ul {
-            margin-left: 20px;
-        }
-    </style>
-</head>
-<body>
-
 <h1>Documentação Yourself Project</h1>
 
 <p>Esta documentação descreve as rotas, parâmetros aceitos, exemplos de requisições e respostas, além dos códigos de status HTTP retornados pelo Web Service. </p>
