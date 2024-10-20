@@ -185,59 +185,68 @@ class Product extends Model
         $stmt = $conn->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll();
-    }
+    } 
 
     public function updateProduct(): bool
-{
-    $conn = Connect::getInstance();
-
+    {
+        // Pega o JSON enviado na requisição
+        $data = file_get_contents('php://input');
+        $json_data = json_decode($data, true);
     
-    $currentData = $this->listById($this->id);
-    if (!$currentData) {
-        $this->message = "Produto não encontrado.";
-        return false;
+        // Atribui os valores do JSON às propriedades do objeto
+        $this->id = $json_data['id'];
+        $this->name = $json_data['name'];
+        $this->price = $json_data['price'];
+        $this->amount = $json_data['amount'];
+        $this->description = $json_data['description'];
+        $this->urlProducts = $json_data['url_products'];
+        $this->categoriesId = $json_data['categories_id'];
+    
+        $conn = Connect::getInstance();
+    
+        $currentData = $this->listById($this->id);
+        if (!$currentData) {
+            $this->message = "Produto não encontrado.";
+            return false;
+        }
+    
+        $checkQuery = "SELECT name FROM products WHERE name = :name AND id != :id";
+        $checkStmt = $conn->prepare($checkQuery);
+        $checkStmt->bindParam(":name", $this->name);
+        $checkStmt->bindParam(":id", $this->id);
+        $checkStmt->execute();
+    
+        if ($checkStmt->rowCount() === 1) {
+            $this->message = "Nome já cadastrado.";
+            return false;
+        }
+    
+        $query = "UPDATE products 
+                  SET products.name = :name, 
+                      products.price = :price, 
+                      products.amount = :amount, 
+                      products.url_products = :url_products, 
+                      products.description = :description, 
+                      products.categories_id = :categories_id 
+                  WHERE id = :id";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(":id", $this->id);
+        $stmt->bindParam(":name", $this->name);
+        $stmt->bindParam(":price", $this->price);
+        $stmt->bindParam(":amount", $this->amount);
+        $stmt->bindParam(":description", $this->description);
+        $stmt->bindParam(":url_products", $this->urlProducts);
+        $stmt->bindParam(":categories_id", $this->categoriesId);
+    
+        try {
+            $stmt->execute();
+            $this->message = "Produto atualizado com sucesso.";
+            return true;
+        } catch (PDOException) {
+            $this->message = "Erro ao atualizar o produto.";
+            return false;
+        }
     }
-
-  
-
-    $checkQuery = "SELECT name FROM products WHERE name = :name AND id != :id";
-    $checkStmt = $conn->prepare($checkQuery);
-    $checkStmt->bindParam(":name", $this->name);
-    $checkStmt->bindParam(":id", $this->id);
-    $checkStmt->execute();
-
-    if ($checkStmt->rowCount() === 1) {
-        $this->message = "Nome já cadastrado.";
-        return false;
-    }
-
-    $query = "UPDATE products 
-              SET products.name = :name, 
-                  products.price = :price, 
-                  products.amount = :amount, 
-                  products.url_products = :url_products, 
-                  products.description = :description, 
-                  products.categories_id = :categories_id 
-              WHERE id = :id";
-    $stmt = $conn->prepare($query);
-    $stmt->bindParam(":id", $this->id);
-    $stmt->bindParam(":name", $this->name);
-    $stmt->bindParam(":price", $this->price);
-    $stmt->bindParam(":amount", $this->amount);
-    $stmt->bindParam(":description", $this->description);
-    $stmt->bindParam(":url_products", $this->urlProducts);
-    $stmt->bindParam(":categories_id", $this->categoriesId);
-
-    try {
-        $stmt->execute();
-        $this->message = "Produto atualizado com sucesso.";
-        return true;
-    } catch (PDOException) {
-        $this->message = "Erro ao atualizar o produto.";
-        return false;
-    }
-}
-
 
     public function deleteProduct(int $id): bool
     {

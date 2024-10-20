@@ -9,13 +9,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e9ad9d0028.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="themes/web/assets/css/about.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/web/about.css">
 </head>
 <body>
     
     <div class="about-container">
     <div class="about-image">
-        <img src="themes/web/assets/imagens/imgabout.png">
+        <img src="assets/images/web/imgabout.png">
     </div>
     <div class="about-message">
 

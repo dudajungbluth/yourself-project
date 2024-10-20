@@ -10,14 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="themes/web/script/index.js"></script>
     <script src="https://kit.fontawesome.com/e9ad9d0028.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="themes/web/assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/web/index.css">
     
 </head>
 <body>
 
 
     <div class="images">
-        <img src="themes/web/assets/imagens/gifprinc.gif">
+        <img src="assets/images/web/gifprinc.gif">
       
     </div>
 

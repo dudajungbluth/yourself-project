@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Yourself</title>
-    <link rel="stylesheet" href="themes/web/assets/css/_theme.css">
+    <link rel="stylesheet" href="assets/css/web/_theme.css">
     <script src="https://kit.fontawesome.com/e9ad9d0028.js" crossorigin="anonymous"></script>
-    <script src="themes/web/assets/js/_theme.js" async></script>
+    <script src="assets/js/web/_theme.js" async></script>
     
 </head>
 <body>
 
 <header>
        <div class="logo">
-        <a href="<?= url();?>"><img src="themes/web/assets/imagens/logo.png"></a> 
+        <a href="<?= url();?>"><img src="assets/images/web/logo.png"></a> 
        </div>
 
 
@@ -55,7 +55,7 @@
         <div class="footer-container">
             <div class="footer-content">
                 
-            <img style="max-width: 120px; max-height: 120px ; margin-right:50px"src="themes/web/assets/imagens/logofooter.png">
+            <img style="max-width: 120px; max-height: 120px ; margin-right:50px"src="assets/images/web/logofooter.png">
 
                 <li class="information">CONTATOS:</li>
 

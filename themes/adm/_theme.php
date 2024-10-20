@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="<?= url("themes/adm/assets/css/_theme.css"); ?>">
+    <link rel="stylesheet" href="<?= url("assets/css/adm/_theme.css"); ?>">
     <script src="https://kit.fontawesome.com/e9ad9d0028.js" crossorigin="anonymous"></script>
 </head>
 
@@ -16,7 +16,7 @@
             <h1>Página Administrativa</h1>
         </div>
         <div class="logo">
-            <a href="<?= url(); ?>"><img src="<?= url("themes/app/assets/imagens/logo.png"); ?>"></a>
+            <a href="<?= url(); ?>"><img src="<?= url("assets/images/adm/logo.png"); ?>"></a>
         </div>
 
         <ul class="main-menu">
@@ -34,12 +34,12 @@
 
     </header>
     <hr>
-    <div class="sub-header">
-            <li onclick="window.location.href = '<?= url("/admin/"); ?>'">Adicionar Produto</li>
+    <div class="sub-header"> 
+            <li onclick="window.location.href = '<?= url("/admin/"); ?>'">Adicionar Produto/Categoria</li>
             <li onclick="window.location.href = '<?= url("/admin/editar-produtos"); ?>'">Editar Produto</li>
             <li onclick="window.location.href = '<?= url("/admin/editar-usuario"); ?>'">Editar usuário</li>
             <li onclick="window.location.href = '<?= url("/admin/encomendas"); ?>'">Encomendas</li>
-            <li onclick="window.location.href = '<?= url("/admin/produtos"); ?>'">Produtos</li>
+            <li onclick="window.location.href = '<?= url("/admin/editar-categoria"); ?>'">Editar categoria</li>
 
     </div>
 

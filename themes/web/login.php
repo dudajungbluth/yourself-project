@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e9ad9d0028.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="themes/web/assets/css/login.css">
-    <script src="themes/web/assets/js/login.js" async></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/web/login.css">
+    <script src="assets/js/web/login.js" async></script>
 
 </head>
 <body>

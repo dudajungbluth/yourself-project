@@ -1,6 +1,12 @@
 
 /* ADMINISTRADOR */
 
+#loginOverlay.credenciais-corretas {
+  display: none;
+  backdrop-filter: none;
+}
+
+
 #loginOverlay {
     display: flex;
     position: fixed;
@@ -45,7 +51,7 @@
         color: red;
     
     }
-    #loginOverlay.credenciais-corretas {
+    .credenciais {
       display: none;
       backdrop-filter: none;
     }

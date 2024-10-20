@@ -1,5 +1,4 @@
 
-
 const formRegister = document.querySelector("#formRegister");
 formRegister.addEventListener("submit",async (event) => {
 

@@ -138,10 +138,12 @@ class User extends Model {
 
         return true;
 
-    }
+ }
     public function loginAdmin(string $email, string $password): bool
     {
-        $query = "SELECT * FROM users WHERE email = :email";
+
+
+        $query = "SELECT * FROM admin WHERE email = :email";
         $conn = Connect::getInstance();
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":email", $email);
@@ -149,7 +151,7 @@ class User extends Model {
         $result = $stmt->fetch();
 
         if (!$result) {
-            $this->message = "E-mail não cadastrado!";
+            $this->message = "Usuário não é um administrador!";
             return false;
         }
 
@@ -162,10 +164,9 @@ class User extends Model {
         $this->setName($result->name);
         $this->setEmail($result->email);
 
-        $this->message = "Usuário logado com sucesso!";
+        $this->message = "Administrador logado!";
 
         return true;
-
     }
 
 }

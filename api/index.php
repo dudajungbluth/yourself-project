@@ -8,6 +8,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header('Access-Control-Allow-Credentials: true'); // Permitir credenciais
+
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit();
@@ -19,8 +20,6 @@ use CoffeeCode\Router\Router;
 $route = new Router(url(),":");
 
 $route->namespace("Source\App\Api");
-
-
 
 $route->group("/users");
 
@@ -47,11 +46,23 @@ $route->group("/products");
 $route->post("/insert-products","Products:insertProduct");
 $route->get("/product","Products:listProduct");
 $route->get("/product/{id}","Products:listById");
-$route->post("/update-product/{id}","Products:updateProduct");
+$route->put("/update-product/{id}","Products:updateProduct");
 $route->delete("/delete-product/{id}","Products:deleteProduct");
 
 $route->group("null");
-$route->dispatch();
+
+/* Orders */
+
+$route->group("/orders");
+
+$route->get("/list","Orders:listOrder");
+$route->get("/list/{id}","Orders:listById");
+$route->post("/insert","Orders:insertOrder");
+$route->put("/update-order/{id}","Orders:updateOrder");
+$route->delete("/delete-order/{id}","Orders:deleteOrder");
+
+$route->group("null");
+
 
 /* Categorias */
 
@@ -60,12 +71,12 @@ $route->group("/categories");
 $route->get("/list","Categories:listCategory");
 $route->get("/list/{id}","Categories:listById");
 $route->post("/insert-category","Categories:insertCategory");
-$route->post("/update-category/{id}","Categories:updateCategory");
+$route->put("/update-category/{id}","Categories:updateCategory");
 $route->delete("/delete-category/{id}","Categories:deleteCategory");
 
 $route->group("null");
-$route->dispatch();
 
+$route->dispatch();
 
 /** ERROR REDIRECT */
 if ($route->error()) {

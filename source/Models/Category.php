@@ -72,38 +72,41 @@ class Category extends Model
 
     public function updateCategory(): bool
     {
-
-        $conn = Connect::getInstance();
-
-    $checkQuery = "SELECT name FROM categories WHERE name = :name";
+        $data = file_get_contents('php://input');
+        $json_data = json_decode($data, true);
     
-    $checkStmt = $conn->prepare($checkQuery);
-    $checkStmt->bindParam(":name", $name);
-    $checkStmt->execute();
-
-    if ($checkStmt->rowCount() === 1) {
-        $this->message = "Nome já cadastrado.";
-        return false;
-    }
-
-        $query = "UPDATE categories 
-        SET categories.name = :name
-        WHERE categories.id = :id";
+        $this->id = $json_data['id'];
+        $this->name = $json_data['name'];
+    
         $conn = Connect::getInstance();
+    
+        $checkQuery = "SELECT name FROM categories WHERE name = :name";
+        $checkStmt = $conn->prepare($checkQuery);
+        $checkStmt->bindParam(":name", $this->name);
+        $checkStmt->execute();
+    
+        if ($checkStmt->rowCount() === 1) {
+            $this->message = "Nome já cadastrado.";
+            return false;
+        }
+    
+        $query = "UPDATE categories 
+                  SET categories.name = :name
+                  WHERE categories.id = :id";
+        
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":id", $this->id);
         $stmt->bindParam(":name", $this->name);
         
         try {
             $stmt->execute();
-            $this->message = "Categoria Atualizada com sucesso ";
+            $this->message = "Categoria Atualizada com sucesso.";
             return true;
         } catch (PDOException) {
-            $this->message = "Erro ao Atualizar a categoria: ";
+            $this->message = "Erro ao Atualizar a categoria.";
             return false;
         }
     }
-
     public function deleteCategory(int $id): bool
 {
 

@@ -18,6 +18,11 @@ class Admin
         
         echo $this->view->render("home",[]);
     }
+    public function login ()
+    {
+        
+        echo $this->view->render("login",[]);
+    }
     public function edit_product ()
     {
         
@@ -38,6 +43,16 @@ class Admin
         
         echo $this->view->render("products",[]);
     }
+    public function categories () // encomendas 
+    {
+        
+        echo $this->view->render("categories",[]);
+    }
 
+    public function edit_categ () // encomendas 
+    {
+        
+        echo $this->view->render("edit_categ",[]);
+    }
 
 }

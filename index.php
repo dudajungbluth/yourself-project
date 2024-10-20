@@ -31,13 +31,14 @@ $route->group(null);
 $route->group("/admin");
 
 
-$route->get("/", "Admin:home");
+$route->get("/", "Admin:login");
+$route->get("/inicio", "Admin:home");
 $route->get("/editar-produtos", "Admin:edit_product");
 $route->get("/editar-usuario", "Admin:edit_user");
+$route->get("/editar-categoria", "Admin:edit_categ");
+
 $route->get("/encomendas", "Admin:orders");
 $route->get("/produtos", "Admin:products");
-
-
 
 $route->get("/ops/{errcode}", "Web:error");
 
